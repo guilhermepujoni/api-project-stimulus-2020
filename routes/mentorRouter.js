@@ -5,9 +5,9 @@ const app = express()
 
 app.post('/api/cadastrar/mentores/:imagem/:nome/:area/', async (request, response) => {
     const dados = {
-        nomeEmpresa: request.params.imagem,
-        email: request.params.nome,
-        senha: request.params.area,
+        imagemPerfil: request.params.imagem,
+        nomeMentor: request.params.nome,
+        areaMentor: request.params.area,
     }
     try {
         const mentor = new mentorModel(dados)
