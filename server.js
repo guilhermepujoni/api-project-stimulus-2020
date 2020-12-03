@@ -1,8 +1,12 @@
 import express from 'express'
-import {userRouter} from './routes/userRouter.js'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 dotenv.config()
+
+import { mainRouter } from './routes/mainRouter.js'
+import {userRouter} from './routes/userRouter.js'
+import { modelRouter } from './routes/mentorRouter.js'
+
 
 async function startMongo()  {
   try {
@@ -19,7 +23,10 @@ startMongo()
 const app = express()
 app.use(express.json())
 
+
+app.use(mainRouter)
 app.use(userRouter)
+app.use(modelRouter)
 
 
 app.listen(process.env.PORT, () =>{
