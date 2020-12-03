@@ -1,1 +1,1 @@
-web: node server.js
+web: node -r dotenv/config --experimental-modules server.js
