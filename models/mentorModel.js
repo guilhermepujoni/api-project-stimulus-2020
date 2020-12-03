@@ -1,19 +1,19 @@
 import mongoose from 'mongoose'
 
 const mentorSchema = mongoose.Schema({
-    imagemPerfil = {
+    imagemPerfil: {
         type: String,
         require: true
     },
-    nomeMentor = {
+    nomeMentor: {
         type: String,
         require: true
     }, 
-    areaMentor = {
+    areaMentor: {
         type: String,
         require: true
     },
-    classificacaoMentor = {
+    classificacaoMentor: {
         type: String,
         require: true,
         default: "0"
