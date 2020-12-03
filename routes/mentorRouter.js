@@ -13,7 +13,7 @@ app.post('/api/cadastrar/mentores/:imagem/:nome/:area/', async (request, respons
         const mentor = new mentorModel(dados)
 
         await mentor.save()
-        response.send({message: 'success'})
+        response.send({message: 'success', mentor: mentor})
     } catch (error) {
         response.status(500).send(error)
     }
