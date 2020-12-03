@@ -1,6 +1,12 @@
-import express from 'express'
+import express, { request, response } from 'express'
 import userModel from '../models/userModel.js'
 const app = express()
+
+//METODO PARA CONFIRMAR O FUNCIONAMENTO DA APLICACAO
+app.get('/', (request, response) => {
+    response.json({message: 'Seja bem vindo a Project Stimulus 2020 API'})
+})
+
 
 // MÉTODO DE CRIAR USUÁRIO
 app.post("/api/cadastrar/:name/:email/:password", async (request, response ) => {
