@@ -1,10 +1,10 @@
-import express, { request, response } from 'express'
+import express from 'express'
 import userModel from '../models/userModel.js'
 const app = express()
 
 //METODO PARA CONFIRMAR O FUNCIONAMENTO DA APLICACAO
 app.get('/', (request, response) => {
-    response.send({message: 'Seja bem vindo a Project Stimulus 2020 API'})
+    response.send('Seja bem vindo a Project Stimulus 2020 API')
 })
 
 
