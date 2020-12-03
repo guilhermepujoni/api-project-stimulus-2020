@@ -1,5 +1,5 @@
 import express from 'express'
-import mentorModel from '../models/mentorModel'
+import mentorModel from '../models/mentorModel.js'
 
 const app = express()
 

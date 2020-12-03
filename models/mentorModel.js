@@ -1,5 +1,4 @@
 import mongoose from 'mongoose'
-import userModel from './userModel'
 
 const mentorSchema = mongoose.Schema({
     imagemPerfil = {
