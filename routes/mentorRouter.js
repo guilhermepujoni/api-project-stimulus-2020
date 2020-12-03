@@ -3,7 +3,7 @@ import mentorModel from '../models/mentorModel.js'
 
 const app = express()
 
-app.post('api/cadastrar/mentores/:imagem/:nome/:area/', async (request, response) => {
+app.post('/api/cadastrar/mentores/:imagem/:nome/:area/', async (request, response) => {
     const dados = {
         nomeEmpresa: request.params.imagem,
         email: request.params.nome,
@@ -19,7 +19,7 @@ app.post('api/cadastrar/mentores/:imagem/:nome/:area/', async (request, response
     }
 }) 
 
-app.post('api/buscar/mentores', async (request, response) => {
+app.post('/api/buscar/mentores', async (request, response) => {
 
     try {
         const mentores = await mentorModel.find()
