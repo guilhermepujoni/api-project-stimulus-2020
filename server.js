@@ -1,12 +1,11 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
-dotenv.config()
 
 import { mainRouter } from './routes/mainRouter.js'
 import {userRouter} from './routes/userRouter.js'
 import { modelRouter } from './routes/mentorRouter.js'
-
+dotenv.config
 
 async function startMongo()  {
   try {
