@@ -1,7 +1,8 @@
 import express from 'express'
 import {userRouter} from './routes/userRouter.js'
 import mongoose from 'mongoose'
-require('dotenv').config()
+import dotenv from 'dotenv'
+dotenv.config()
 
 (async () => {
   try {
