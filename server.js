@@ -30,7 +30,7 @@ app.use(userRouter)
 app.use(modelRouter)
 
 app.use(mapeamento01Router)
-app.use(mapeamento02Router)
+//app.use(mapeamento02Router)
 
 
 app.listen(process.env.PORT, () =>{
