@@ -13,7 +13,7 @@ app.post("/api/cadastrar/:name/:email/:password", async (request, response ) => 
         const user = new userModel(dados)
 
         await user.save()
-        response.send({message: 'success'})
+        response.send({message: 'success', nomeEmpresa: dados.nomeEmpresa})
     } catch (error) {
         response.status(500).send(error)
     }
