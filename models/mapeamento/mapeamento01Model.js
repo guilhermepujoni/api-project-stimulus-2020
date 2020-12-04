@@ -1,6 +1,10 @@
 import mongoose from 'mongoose'
 
 const mapeamento01Schema = mongoose.Schema({
+    email: {
+        type: String,
+        require: true
+    },
     endereco: {
         type: String,
         require: true

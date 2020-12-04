@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 
 import { mainRouter } from './routes/mainRouter.js'
-import {userRouter} from './routes/userRouter.js'
+import { userRouter } from './routes/userRouter.js'
 import { modelRouter } from './routes/mentorRouter.js'
 import { mapeamento01Router } from './routes/mapeamento/mapeamento01Router.js'
 dotenv.config
