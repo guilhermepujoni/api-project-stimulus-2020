@@ -10,10 +10,19 @@ app.post("/api/cadastrar/:name/:email/:password", async (request, response ) => 
         senha: request.params.password,
     }
     try {
-        const user = new userModel(dados)
+        const emailExiste = await userModel.findOne({email: email})
+        const nomeExiste = await userModel.findOne({nomeEmpresa: nomeEmpresa})
 
-        await user.save()
-        response.send({message: 'success', nomeEmpresa: dados.nomeEmpresa})
+        if(emailExiste || nomeExiste) {
+            response.send({existeUsuario: true})
+        } else {
+            const user = new userModel(dados)
+
+            await user.save()
+            response.send({message: 'success', nomeEmpresa: dados.nomeEmpresa})
+        }
+
+        
     } catch (error) {
         response.status(500).send(error)
     }
