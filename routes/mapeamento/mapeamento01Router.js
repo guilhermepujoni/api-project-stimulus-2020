@@ -1,5 +1,5 @@
 import express from 'express'
-import mapeamento01Model from '../../models/mapeamento/mapeamento01Model'
+import mapeamento01Model from '../../models/mapeamento/mapeamento01Model.js'
 
 const app = express()
 
