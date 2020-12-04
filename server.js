@@ -6,7 +6,7 @@ import { mainRouter } from './routes/mainRouter.js'
 import { userRouter } from './routes/userRouter.js'
 import { modelRouter } from './routes/mentorRouter.js'
 import { mapeamento01Router } from './routes/mapeamento/mapeamento01Router.js'
-//import { mapeamento02Router } from './routes/mapeamento/mapeamento02Router.js'
+import { mapeamento02Router } from './routes/mapeamento/mapeamento02Router.js'
 dotenv.config
 
 async function startMongo()  {
@@ -30,7 +30,7 @@ app.use(userRouter)
 app.use(modelRouter)
 
 app.use(mapeamento01Router)
-//app.use(mapeamento02Router)
+app.use(mapeamento02Router)
 
 
 app.listen(process.env.PORT, () =>{
