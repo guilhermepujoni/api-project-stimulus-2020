@@ -19,29 +19,12 @@ app.put('/api/mapeamento/02/:email/:dados1/:dados2/:dados3/:dados4/', async (req
         }
         const buscaMap01 = await mapeamento02Model.findOneAndUpdate({email: email}, dados)
  
-  
-
-        
         response.send({message: 'success', mapeamento02: buscaMap01})
     } catch (error) {
         response.status(500).send(error)
     }
 }) 
 
-app.post('/api/buscar/mapeamento/01', async (request, response) => {
-
-    try {
-        const map01 = await mapeamento02Model.find()
-        
-        if(map01) {
-            response.send({message: 'success', mapeamento02: map01})
-        } else {
-        response.send({message: 'Não encontrado'})
-        }
-    } catch (error) {
-        response.status(500).send(error)
-    }
-}) 
 
 
 
