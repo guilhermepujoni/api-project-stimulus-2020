@@ -16,7 +16,7 @@ app.post('/api/mapeamento/01/:email/:dados1/:dados2/:dados3/:dados4/:dados5/', a
         const map01 = new mapeamento01Model(dados)
 
         await map01.save()
-        response.send({message: 'success', mapeamento01: dados})
+        response.send({message: 'success', as: dados})
     } catch (error) {
         response.status(500).send(error)
     }
@@ -28,7 +28,7 @@ app.post('/api/buscar/mapeamento/01', async (request, response) => {
         const map01 = await mapeamento01Model.find()
         
         if(map01) {
-            response.send({message: 'success', mapeamento01: map01})
+            response.send({message: 'success', as: map01})
         } else {
         response.send({message: 'Não encontrado'})
         }
