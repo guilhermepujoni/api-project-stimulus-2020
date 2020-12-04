@@ -43,6 +43,6 @@ const mapeamento02Schema = mongoose.Schema({
     },
 })
 
-const mapeamento02Model = mongoose.model('mapeamento01', mapeamento02Schema, 'mapeamento01')
+const mapeamento02Model = mongoose.model('mapeamento02', mapeamento02Schema, 'mapeamento02')
 
 export default mapeamento02Model
